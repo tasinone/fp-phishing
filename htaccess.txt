@@ -1,0 +1,9 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# If the requested URL does not exist as a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect to the same URL but with .html
+RewriteRule ^(.*)$ $1.html [L]
